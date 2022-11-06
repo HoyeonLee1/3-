@@ -29,8 +29,14 @@ struct Transform
     glm::mat3 translate;
     glm::mat3 scale;
     glm::mat3 rotation;
+
+    glm::mat3 testT;
+    glm::mat3 testR;
+    glm::mat3 testS;
 };
 
+Vertex testo;
+Vertex result;
 
 Vertex star[5];             // static mesh
 Vertex transformedStar[5];  //화면에 그릴 오망성
@@ -119,27 +125,8 @@ void Init()
     }
 
 
-    //트랜스폼 초기화 (기본형 제공)
-    /*transform.translate = glm::mat3(
-        1, 0, 0,
-        0, 1, 0,
-        0, 0, 1
-    );
-    transform.rotation = glm::mat3(
-        glm::cos(glm::radians(0.0f)), -glm::sin(glm::radians(0.0f)), 0,
-        glm::sin(glm::radians(0.0f)), glm::cos(glm::radians(0.0f)), 0,
-        0, 0, 1
-    );
-    transform.scale = glm::mat3(
-        1, 0, 0,
-        0, 1, 0,
-        0, 0, 1
-    );*/
-
-
-
-
-
+   
+    
 
 }
 
@@ -208,7 +195,7 @@ void Update()
         }
 
 
-
+        
 
         //색 초기화
         glClearColor(.0f, 0.0f, 0.0f, 0.1f);
@@ -270,6 +257,10 @@ void Update()
         string fps_s = "FPS : " + to_string(fps);
         cout << fps_s << endl;
 
+
+      
+        
+
     }
 }
 
@@ -288,6 +279,34 @@ int main(void)
     Init();
     Update();
     Release();
-
     exit(EXIT_SUCCESS);
+    /*r = 30;
+
+    transform.testT = glm::mat3(
+        1, 0, 3,
+        0, 1, 5,
+        0, 0, 1
+    );
+    transform.testR = glm::mat3(
+        glm::cos(glm::radians(r)), -glm::sin(glm::radians(r)), 0,
+        glm::sin(glm::radians(r)), glm::cos(glm::radians(r)), 0,
+        0, 0, 1
+    );
+    transform.testS = glm::mat3(
+        2, 0, 0,
+        0, 2, 0,
+        0, 0, 1
+    );
+
+    testo.pos.x = 1;
+    testo.pos.y = 1;
+    testo.pos.z = 1;
+    result.pos.x = 1;
+    result.pos.y = 1;
+    result.pos.z = 1;
+    
+    result.pos = testo.pos * transform.testT * transform.testR * transform.testS ;
+
+    cout << result.pos.x << " " << result.pos.y << " " << result.pos.z;*/
+    
 }
