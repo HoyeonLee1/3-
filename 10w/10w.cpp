@@ -1,6 +1,4 @@
 #include <iostream>
-#include <math.h>
-#include <stdio.h>
 #include "Musoenmath.h"
 
 using namespace std;
@@ -62,5 +60,5 @@ int main()
     vec3 p = v * Tr * Ro * Sc;
     // 최종 좌표값 출력
     p.printvec3();
-
+    
 }
