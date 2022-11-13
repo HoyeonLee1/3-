@@ -28,13 +28,6 @@ struct vec3
 };
 
 
-//vec3 타입끼리 곱셈연산을 하게해주는 연산자 오버로딩
-vec3 operator*(vec3 a, vec3 b)
-{
-	vec3 result(a.x * b.x, a.y * b.y, a.z * b.z);
-	return result;
-}
-
 
 //3*3 행렬 선언
 struct mat3
