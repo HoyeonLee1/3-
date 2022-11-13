@@ -214,8 +214,6 @@ void mat4::multiplytransposematrix(mat4 x, mat4 y) {
 
 }
 
-
-
 int main()
 {
     mat3 mat3IdentityTest(0, 0, 0, 0, 0, 0, 0, 0, 0);
