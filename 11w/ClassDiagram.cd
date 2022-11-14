@@ -29,14 +29,14 @@
     </TypeIdentifier>
   </Struct>
   <Struct Name="vec3">
-    <Position X="9.5" Y="2" Width="1.5" />
+    <Position X="9.5" Y="2" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAABAAAAAAAAAAAAAAAEAAAAAABAAAAAAAA=</HashCode>
       <FileName>MusoenMath.h</FileName>
     </TypeIdentifier>
   </Struct>
   <Struct Name="vec4">
-    <Position X="11.25" Y="2" Width="1.5" />
+    <Position X="11.75" Y="2" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAIAAAAAAAAAAAAAAAAEAAAAAABAAAAAAAA=</HashCode>
       <FileName>MusoenMath.h</FileName>
