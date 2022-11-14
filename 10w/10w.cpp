@@ -28,6 +28,8 @@ void vec3::printvec3()
     cout << "----------------" << endl;
     cout << endl;
 }
+
+//
 int main()
 {
     // 삼각함수 선언
