@@ -413,6 +413,7 @@ vec1x3 operator*(vec1x3 b, mat3 a)
 	return r;
 }
 // 행렬과 1x3벡터의 곱셈 순서가 바뀌었을 때 vec1x3을 vec3로 전치 후 연산을 진행하는 연산자 오버로딩
+
 vec1x3 operator*(mat3 b,vec1x3 a)
 {
 	//결과값

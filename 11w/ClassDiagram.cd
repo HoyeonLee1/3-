@@ -1,42 +1,42 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Struct Name="mat3">
-    <Position X="0.5" Y="2" Width="2" />
+    <Position X="5.5" Y="2" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAQAAAAAAAgAAAACQAAAAAAAAAAAAwAAAgAAAAAAA=</HashCode>
       <FileName>MusoenMath.h</FileName>
     </TypeIdentifier>
   </Struct>
   <Struct Name="mat4">
-    <Position X="2.75" Y="2" Width="2" />
+    <Position X="3.25" Y="2" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAQAAAAAAAAAEAACAAAAgAAAAAAAAAAQAgAAgAAAA=</HashCode>
       <FileName>MusoenMath.h</FileName>
     </TypeIdentifier>
   </Struct>
   <Struct Name="vec1x3">
-    <Position X="5" Y="2" Width="2" />
+    <Position X="3.25" Y="6.75" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAABAAAAAAAg=</HashCode>
       <FileName>MusoenMath.h</FileName>
     </TypeIdentifier>
   </Struct>
   <Struct Name="vec1x4">
-    <Position X="7.25" Y="2" Width="2" />
+    <Position X="5.5" Y="4.75" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAQAAAAAAAQAAAAAAABAAAAAAAA=</HashCode>
       <FileName>MusoenMath.h</FileName>
     </TypeIdentifier>
   </Struct>
   <Struct Name="vec3">
-    <Position X="9.5" Y="2" Width="2" />
+    <Position X="5.5" Y="6.75" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAABAAAAAAAAAAAAAAAEAAAAAABAAAAAAAA=</HashCode>
       <FileName>MusoenMath.h</FileName>
     </TypeIdentifier>
   </Struct>
   <Struct Name="vec4">
-    <Position X="11.75" Y="2" Width="2" />
+    <Position X="3.25" Y="4.75" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAIAAAAAAAAAAAAAAAAEAAAAAABAAAAAAAA=</HashCode>
       <FileName>MusoenMath.h</FileName>
