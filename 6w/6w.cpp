@@ -87,7 +87,6 @@ void Init()
 
     startRenderTimePoint = chrono::system_clock::now();
 
-
     //object持失採
      /// Star(神諺失) 持失
     int i = 0;
