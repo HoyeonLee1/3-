@@ -227,4 +227,5 @@ int main()
     vec1x4_P_M_Result.printvec1x4();
     vec1x4_P_M_Result = vec1x4_P_M / 2;
     vec1x4_P_M_Result.printvec1x4();
+
 }
