@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{c64c1b51-ac4a-4a34-8190-e7572103dba6}</ProjectGuid>
-    <RootNamespace>My10w</RootNamespace>
+    <ProjectGuid>{b497658b-bccd-46a5-a1b5-264e8a9ce13f}</ProjectGuid>
+    <RootNamespace>My12w</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -127,7 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="10w.cpp" />
+    <ClCompile Include="12.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MusoenMath.h" />
