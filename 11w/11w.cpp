@@ -60,7 +60,7 @@ void vec4::printvec4()
     cout << "----------------" << endl;
     cout << endl;
 }
-//vec4 출력 함수
+//vec1x4 출력 함수
 void vec1x4::printvec1x4()
 {
     cout << "----------------" << endl;
