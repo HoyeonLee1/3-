@@ -15,7 +15,6 @@ void mat3::printmat3()
     }
     cout << "----------------" << endl;
     cout << endl;
-
 }
 void vec3::printvec3()
 {
@@ -62,5 +61,4 @@ int main()
     vec3 p = v * Tr * Ro * Sc;
     // 최종 좌표값 출력
     p.printvec3();
-    
 }
