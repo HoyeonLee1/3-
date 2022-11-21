@@ -26,6 +26,7 @@ void mat4::printmat4()
             cout << b[i][j] << " ";
         cout << endl;
     }
+
     cout << "----------------" << endl;
     cout << endl;
 }
