@@ -8,13 +8,13 @@
 
 using namespace std;
 
-vec3 star[5];          
-vec3 transformedStar[5];  
-vec3 circle[360];            
-vec3 transformedCircle[360];
-vec4 starColor[5];
-vec4 circleColor[360];
-vec4 transformedStarColor[5];
+vec3 star[5];                           //최초 별
+vec3 transformedStar[5];                //업데이트 되는 별
+vec3 circle[360];                       //원
+vec3 transformedCircle[360];            //업데이트 되는 원
+vec4 starColor[5];                      //별 색상
+vec4 circleColor[360];                  //원 색상
+vec4 transformedStarColor[5];           //
 vec4 transformedCircleColor[360];
 
 mat3 translate;

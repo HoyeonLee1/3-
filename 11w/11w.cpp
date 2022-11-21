@@ -69,7 +69,6 @@ void vec1x4::printvec1x4()
     cout << endl;
 }
 
-
 int main()
 {
     // 1. 단위행렬 초기화 출력
