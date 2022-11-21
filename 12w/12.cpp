@@ -98,11 +98,7 @@ void Init()
 
 }
 
-void Release()
-{
-    glfwDestroyWindow(window);
-    glfwTerminate();
-}
+
 void Update()
 {
     while (!glfwWindowShouldClose(window))
@@ -164,12 +160,9 @@ void Update()
         glClearColor(.0f, 0.0f, 0.0f, 0.1f);
         glClear(GL_COLOR_BUFFER_BIT);
 
+        //별그리기
         glLineWidth(7.0f);
-
         glBegin(GL_LINE_STRIP);
-
-
-        //별 그리기
         int a = 0;
         glColor4f(transformedStarColor[a].x[0][0], transformedStarColor[a].x[1][0],
             transformedStarColor[a].x[2][0], transformedStarColor[a].x[3][0]);
@@ -225,6 +218,12 @@ void Update()
         string fps_s = "FPS : " + to_string(fps);
         cout << fps_s << endl;
     }
+}
+
+void Release()
+{
+    glfwDestroyWindow(window);
+    glfwTerminate();
 }
 
 static void error_callback(int error, const char* description)
