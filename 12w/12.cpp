@@ -161,7 +161,6 @@ void Update()
             transformedStar[i] =  translate * rotation * scale * star[i] ;
         }
 
-
         glClearColor(.0f, 0.0f, 0.0f, 0.1f);
         glClear(GL_COLOR_BUFFER_BIT);
 
