@@ -26,5 +26,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="ClassDiagram.cd">
+      <Filter>리소스 파일</Filter>
+    </None>
   </ItemGroup>
 </Project>

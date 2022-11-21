@@ -793,6 +793,8 @@ void mat3::multiplytransposematrix(mat3 x, mat3 y) {
 //4x4 행렬 두 개를 전치 후 곱셈을 진행하여 그 결과값을 리턴해주는 함수
 void mat4::multiplytransposematrix(mat4 x, mat4 y) {
 	mat4  v, p;
+
+	mat4 r;
 	//x행렬 전치
 	for (int i = 0; i < 4; i++)
 		for (int j = 0; j < 4; j++)
@@ -801,6 +803,7 @@ void mat4::multiplytransposematrix(mat4 x, mat4 y) {
 	for (int i = 0; i < 4; i++)
 		for (int j = 0; j < 4; j++)
 			p.b[j][i] = y.b[i][j];
+
 	//1행
 	b[0][0] = (v.b[0][0] * p.b[0][0]) + (v.b[0][1] * p.b[1][0]) + (v.b[0][2] * p.b[2][0]) + (v.b[0][3] * p.b[3][0]);
 	b[0][1] = (v.b[0][0] * p.b[0][1]) + (v.b[0][1] * p.b[1][1]) + (v.b[0][2] * p.b[2][1]) + (v.b[0][3] * p.b[3][1]);
