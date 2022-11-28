@@ -8,10 +8,10 @@
 
 using namespace std;
 
-vec3 star[5];                           //최초 별
-vec3 transformedStar[5];                //업데이트 별
-vec3 circle[360];                       //원
-vec3 transformedCircle[360];            //업데이트 원
+vec1x3 star[5];                           //최초 별
+vec1x3 transformedStar[5];                //업데이트 별
+vec1x3 circle[360];                       //원
+vec1x3 transformedCircle[360];            //업데이트 원
 vec4 starColor[5];                      //별 색상
 vec4 circleColor[360];                  //원 색상
 vec4 transformedStarColor[5];           //업데이트 별 색상
@@ -62,8 +62,8 @@ void Init()
     {
         //별 그리기
         star[i].x[0][0] = -sin(theta * PI / 180) * 0.5f;
-        star[i].x[1][0] = cos(theta * PI / 180) * 0.5f;
-        star[i].x[2][0] = 1.0f;
+        star[i].x[0][1] = cos(theta * PI / 180) * 0.5f;
+        star[i].x[0][2] = 1.0f;
 
         //별 색상 초기화
         starColor[i].x[0][0] = 0.3f;
@@ -82,8 +82,8 @@ void Init()
     {
         //원 그리기
         circle[theta].x[0][0] = -sin((float)theta * PI / 180) * 0.5f;
-        circle[theta].x[1][0] = cos((float)theta * PI / 180) * 0.5f;
-        circle[theta].x[2][0] = 1.0f;
+        circle[theta].x[0][1] = cos((float)theta * PI / 180) * 0.5f;
+        circle[theta].x[0][2] = 1.0f;
 
         //원 색상
         circleColor[theta].x[0][0] = 0.3f;
@@ -148,13 +148,13 @@ void Update()
         //원 업데이트
         for (int i = 0; i < 360; i++)
         {
-            transformedCircle[i] = translate * rotation * scale * circle[i];
+            transformedCircle[i] = circle[i]* scale * rotation * translate;
         }
 
         //별 업데이트
         for (int i = 0; i < 5; i++)
         {
-            transformedStar[i] =  translate * rotation * scale * star[i] ;
+            transformedStar[i] = star[i]* scale  * rotation * translate;
         }
 
         glClearColor(.0f, 0.0f, 0.0f, 0.1f);
@@ -166,27 +166,27 @@ void Update()
         int a = 0;
         glColor4f(transformedStarColor[a].x[0][0], transformedStarColor[a].x[1][0],
             transformedStarColor[a].x[2][0], transformedStarColor[a].x[3][0]);
-        glVertex3f(transformedStar[a].x[0][0], transformedStar[a].x[1][0], 0.0f);
+        glVertex3f(transformedStar[a].x[0][0], transformedStar[a].x[0][1], 0.0f);
         a = 3;
         glColor4f(transformedStarColor[a].x[0][0], transformedStarColor[a].x[1][0],
             transformedStarColor[a].x[2][0], transformedStarColor[a].x[3][0]);
-        glVertex3f(transformedStar[a].x[0][0], transformedStar[a].x[1][0], 0.0f);
+        glVertex3f(transformedStar[a].x[0][0], transformedStar[a].x[0][1], 0.0f);
         a = 1;
         glColor4f(transformedStarColor[a].x[0][0], transformedStarColor[a].x[1][0], 
             transformedStarColor[a].x[2][0], transformedStarColor[a].x[3][0]);
-        glVertex3f(transformedStar[a].x[0][0], transformedStar[a].x[1][0], 0.0f);
+        glVertex3f(transformedStar[a].x[0][0], transformedStar[a].x[0][1], 0.0f);
         a = 4;
         glColor4f(transformedStarColor[a].x[0][0], transformedStarColor[a].x[1][0],
             transformedStarColor[a].x[2][0], transformedStarColor[a].x[3][0]);
-        glVertex3f(transformedStar[a].x[0][0], transformedStar[a].x[1][0], 0.0f);
+        glVertex3f(transformedStar[a].x[0][0], transformedStar[a].x[0][1], 0.0f);
         a = 2;
         glColor4f(transformedStarColor[a].x[0][0], transformedStarColor[a].x[1][0],
             transformedStarColor[a].x[2][0], transformedStarColor[a].x[3][0]);
-        glVertex3f(transformedStar[a].x[0][0], transformedStar[a].x[1][0], 0.0f);
+        glVertex3f(transformedStar[a].x[0][0], transformedStar[a].x[0][1], 0.0f);
         a = 0;
         glColor4f(transformedStarColor[a].x[0][0], transformedStarColor[a].x[1][0],
             transformedStarColor[a].x[2][0], transformedStarColor[a].x[3][0]);
-        glVertex3f(transformedStar[a].x[0][0], transformedStar[a].x[1][0], 0.0f);
+        glVertex3f(transformedStar[a].x[0][0], transformedStar[a].x[0][1], 0.0f);
 
         glEnd();
 
@@ -196,7 +196,7 @@ void Update()
         {
             glColor4f(transformedCircleColor[theta].x[0][0], transformedCircleColor[theta].x[1][0],
                 transformedCircleColor[theta].x[2][0], transformedCircleColor[theta].x[3][0]);
-            glVertex3f(transformedCircle[theta].x[0][0], transformedCircle[theta].x[1][0], 0.0f);
+            glVertex3f(transformedCircle[theta].x[0][0], transformedCircle[theta].x[0][1], 0.0f);
         }
         glEnd();
 

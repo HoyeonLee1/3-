@@ -151,11 +151,11 @@ void Update()
         //////////////////////////////////////////////////////////////////////////////////////////
 
         tx += 0.001f;
-        r += 1.0f;
+        r -= 1.0f;
         transform.translate = glm::mat3(
-            1, 0, 0,
+            1, 0, tx,
             0, 1, 0,
-            tx, 0, 1
+            0, 0, 1
         );
         transform.rotation = glm::mat3(
             glm::cos(glm::radians(r)), -glm::sin(glm::radians(r)), 0,
@@ -184,13 +184,13 @@ void Update()
 
         for (int i = 0; i < 360; i++)
         {
-            transformedCircle[i].pos = transform.translate * transform.rotation * transform.scale * circle[i].pos;
+            transformedCircle[i].pos = circle[i].pos* transform.scale * transform.rotation *   transform.translate;
         }
 
 
         for (int i = 0; i < 5; i++)
         {
-            transformedStar[i].pos = transform.translate * transform.rotation * transform.scale * star[i].pos;
+            transformedStar[i].pos = star[i].pos* transform.scale * transform.rotation * transform.translate ;
         }
 
 
